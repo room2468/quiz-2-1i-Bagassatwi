@@ -27,7 +27,7 @@ read -r used_mb
 usage=$((used_mb*100/total_mb))
 echo Free: $((total_mb-used_mb)) MB
 echo Usage: $usage%
-   if (( usage >= 90 )); then echo "Critical"
-        elif (( usage >= 70 && usage <= 89 )); then echo "Warning"
-        else echo "Normal"
+   if (( usage >= 90 )); then echo "Status: Critical"
+        elif (( usage >= 70 && usage <= 89 )); then echo "Status: Warning"
+        else echo "Status: Normal"
 fi
